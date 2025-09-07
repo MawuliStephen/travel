@@ -1,12 +1,8 @@
 "use client";
-import Navheader from "@/components/header";
+
 import { useRouter } from 'next/navigation';
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  Card, CardDescription, CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -22,8 +18,6 @@ export default function Home() {
   return (
     <div>
 
-
-
       {/* Hero Section */}
       <section className="flex flex-col lg:flex-row items-center gap-10">
         <div className="w-full text-center lg:text-left lg:w-1/2 ">
@@ -32,7 +26,7 @@ export default function Home() {
           </h1>
 
           <p className="mb-6 text-sm sm:text-base max-w-xl mx-auto lg:mx-0">
-            We can all travel the world. You don't need to be rich,
+            We can all travel the world. You don&apos;t need to be rich,
             <br /> you just need to talk to the right connection.
           </p>
           <div className=" md:w-full flex justify-center lg:justify-start">
@@ -67,18 +61,25 @@ export default function Home() {
             studying and touring the world. You are next.
           </p>
 
+
           <div className="flex -space-x-4">
-            <img
+            <Image
               src="/assets/images.jpg"
+              width={400}
+              height={300}
               alt="Avatar 1"
               className="w-12 h-12 rounded-full border-2 border-white"
             />
-            <img
+            <Image
+              width={400}
+              height={300}
               src="/assets/ff.jpg"
               alt="Avatar 2"
               className="w-12 h-12 rounded-full border-2 border-white"
             />
-            <img
+            <Image
+              width={400}
+              height={300}
               src="/assets/sika.jpg"
               alt="Avatar 3"
               className="w-12 h-12 rounded-full border-2 border-white"
@@ -159,7 +160,7 @@ export default function Home() {
               { label: "Accommodation Arrangements", icon: "/assets/hotel.png" },
             ].map((service, i) => (
               <div key={i} className="flex items-center gap-3 flex-wrap justify-center sm:justify-start">
-                <img src="/icons/check.svg" alt="check" className="w-10 h-10" />
+                <Image src="/icons/check.svg" alt="check" className="w-10 h-10" />
                 {/* <img src={service.icon} alt={service.label} className="w-8 h-8 rounded" /> */}
                 <span className="text-sm tracking-[-.01em] font-medium">{service.label}</span>
               </div>
@@ -172,7 +173,7 @@ export default function Home() {
         </div>
 
         <div className="w-full md:w-1/2">
-          <img
+          <Image
             src="/assets/magic.png"
             alt="Travel illustration"
             className="w-full h-auto max-w-sm mx-auto md:mx-0"

@@ -11,10 +11,16 @@ export function FAQSection() {
   return (
     <section className="flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12">
       <div className="w-full max-w-3xl text-center">
-        <h1 className="text-3xl sm:text-5xl font-bold leading-tight mb-10">
+        {/* <h1 className="text-3xl sm:text-5xl font-bold leading-tight mb-10">
           What's on your mind;<br />
           Questions?
-        </h1> 
+        </h1>  */}
+
+        <h1 className="text-3xl sm:text-5xl font-bold leading-tight mb-10">
+          What&rsquo;s on your mind;<br />
+          Questions?
+        </h1>
+
 
         <Accordion type="single" collapsible className="w-full space-y-2">
           {faqItems.map((faq, index) => (
