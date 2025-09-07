@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { FAQSection } from "@/components/fqa";
 
 export default function Home() {
   const router = useRouter();
@@ -34,7 +35,7 @@ export default function Home() {
               We can all travel the world. You don't need to be rich,
               <br /> you just need to talk to the right connection.
             </p>
-<div className = " md:w-full flex justify-center lg:justify-start">
+          <div className = " md:w-full flex justify-center lg:justify-start">
             <Button
               variant="default"
               className="w-full sm:w-auto"
@@ -101,28 +102,28 @@ export default function Home() {
               title: "Start Touring the World",
               desc: "Work and pay opportunities in Dubai, Asia, and Europe. Visa cost is fully sponsored. 14 slots available.",
               bg: "bg-amber-100",
-              img: "/assets/magic.png",
+              img: "/assets/city.jpg",
             },
             {
-              title: "Learn and Work Abroad",
+              title: "Learn, Work & live Abroad",
               desc: "Scholarships with part-time jobs in Canada and Germany. Applications close in 7 days.",
               bg: "bg-green-100",
-              img: "/assets/images.jpg",
+              img: "/assets/work.jpg",
             },
             {
-              title: "Build a Career in Tech",
+              title: "Study Abroad  with  scholarship ",
               desc: "Remote training and relocation support to Europe and the US for junior tech roles.",
               bg: "bg-blue-100",
-              img: "/assets/ff.jpg",
+              img: "/assets/student.jpg",
             },
             {
-              title: "Healthcare & Nursing Jobs",
+              title: "Get your Passport or visa issues sorted",
               desc: "Nursing jobs with accommodation support in the UK, Germany, and Saudi Arabia.",
               bg: "bg-purple-100",
-              img: "/assets/avatar4.png",
+              img: "/assets/passport.jpg",
             },
           ].map((card, i) => (
-            <Card key={i} className="flex flex-col h-full overflow-hidden shadow-md hover:shadow-lg transition">
+            <Card key={i} className="flex flex-col h-full gap-0 py-0 overflow-hidden hover:shadow-lg transition">
               <Image
                 src={card.img}
                 alt={card.title}
@@ -140,13 +141,13 @@ export default function Home() {
           ))}
         </section>
 
-        <div className="h-4" /> {/* Spacer */}
+        <div className="h-12" /> {/* Spacer */}
 
         {/* Services List Section */}
         <section className="flex flex-col md:flex-row-reverse items-center gap-10">
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h1 className="text-3xl sm:text-5xl font-bold leading-tight mb-6">
-              Thinking of what we got? Here are our services
+             Our services <br/> includes; 
             </h1>
 
             <div className="space-y-4">
@@ -178,6 +179,65 @@ export default function Home() {
             />
           </div>
         </section>
+
+
+        <div className="h-4  pb-4" /> {/* Spacer */}
+
+        {/* Steps Cards Section */}
+        <div className="flex justify-center">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-row flex-justify-between lg:max-w-5xl lg:items-center gap-6 px-2 sm:px-0 mt-12">
+          {[
+            {
+              title: "Step one",
+              desc: "Work and pay opportunities in Dubai, Asia, and Europe. Visa cost is fully sponsored. 14 slots available.",
+              bg: "bg-amber-100",
+              img: "/assets/city.jpg",
+            },
+            {
+              title: "Step two",
+              desc: "Scholarships with part-time jobs in Canada and Germany. Applications close in 7 days.",
+              bg: "bg-green-100",
+              img: "/assets/work.jpg",
+            },
+            {
+              title: "Step three",
+              desc: "Remote training and relocation support to Europe and the US for junior tech roles.",
+              bg: "bg-blue-100",
+              img: "/assets/student.jpg",
+            },
+           
+          ].map((card, i) => (
+            <Card key={i} className={`${card.bg} flex flex-col pt-3 pb-0 lg:w-300px h-full gap-0 overflow-hidden hover:shadow-lg transition`}>
+
+              <div className={" px-6 py-3 flex-grow flex flex-col"}>
+                <CardTitle className="text-lg uppercase font-semibold mb-2">{card.title}</CardTitle>
+                <CardDescription className="text-sm flex-grow">
+                  {card.desc}
+                </CardDescription>
+
+                <Image
+                src={card.img}
+                alt={card.title}
+                width={150}
+                height={400}
+                className="w-full rounded-2xl h-48 object-cover"
+              />
+              </div>
+            </Card>
+          ))}
+        </section>
+        </div>
+
+        <div className="h-12" /> {/* Spacer */}
+
+
+            {/* Services List Section */}
+
+
+             <FAQSection />
+
+
+
       </main>
     </div>
   );
