@@ -160,7 +160,7 @@ export default function Home() {
               { label: "Accommodation Arrangements", icon: "/assets/hotel.png" },
             ].map((service, i) => (
               <div key={i} className="flex items-center gap-3 flex-wrap justify-center sm:justify-start">
-                <Image src="/icons/check.svg" alt="check" className="w-10 h-10" />
+                <Image src="/icons/check.svg"   width={400}              height={300} alt="check" className="w-10 h-10" />
                 {/* <img src={service.icon} alt={service.label} className="w-8 h-8 rounded" /> */}
                 <span className="text-sm tracking-[-.01em] font-medium">{service.label}</span>
               </div>
@@ -176,6 +176,8 @@ export default function Home() {
           <Image
             src="/assets/magic.png"
             alt="Travel illustration"
+              width={400}
+              height={300}
             className="w-full h-auto max-w-sm mx-auto md:mx-0"
           />
         </div>
