@@ -14,18 +14,14 @@ export function FAQSection() {
         <h1 className="text-3xl sm:text-5xl font-bold leading-tight mb-10">
           What's on your mind;<br />
           Questions?
-        </h1>
-
-
-    
-                
+        </h1> 
 
         <Accordion type="single" collapsible className="w-full space-y-2">
           {faqItems.map((faq, index) => (
             <AccordionItem
               key={faq.question}
               value={`item-${index}`}
-              className="border rounded-lg overflow-hidden data-[state=open]:bg-purple-50"
+              className="border rounded-lg overflow-hidden data-[state=open]:bg-purple-100"
             >
               <AccordionTrigger className="px-4 py-3 text-left text-base sm:text-lg font-medium">
                 {faq.question}
